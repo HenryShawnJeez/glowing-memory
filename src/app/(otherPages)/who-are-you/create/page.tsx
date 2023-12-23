@@ -173,7 +173,7 @@ export default function Register() {
                 className="w-full py-4 text-center text-xs md:text-sm rounded-3xl bg-accentBlue hover:text-accentBlue hover:bg-[#EDEDEE] duration-500 hover:font-semibold"
                 type="submit"
               >
-                Create Account
+                {loading ? "Creating" : "Create Account"}
               </button>
             </div>
           </form>
