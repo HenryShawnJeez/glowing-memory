@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+//Schemas
+model User {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  email          String?   @unique
+  emailVerified  DateTime?
+  hashedPassword String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model FirstForm {
+  id                  String  @id @default(auto()) @map("_id") @db.ObjectId
+  email               String
+  payoutQuantity      String
+  iovWalletAddress    String
+  iovClaimWallet      String
+  royalMemberShipCard String?
+  ethereumAddress     String
+}
+
+model ContactForm {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  firstName String
+  lastName  String
+  email     String
+  phone     String
+  message   String
+}
+
+model DepositForm {
+  id               String @id @default(auto()) @map("_id") @db.ObjectId
+  email            String
+  chosenETH        Float
+  chosenIOVBalance Float
+  connectedAddress String
+  transactionID    String
+}

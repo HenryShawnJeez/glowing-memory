@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Customise Scrollbar for coordindators */
+.bar::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+.bar::-webkit-scrollbar-thumb {
+  background-color: #3e4959;
+}
+
+.bar::-webkit-scrollbar-thumb:hover {
+  background-color: #4a90e2;
+}
+
+.bar::-webkit-scrollbar-track {
+  background-color: #354051;
+}
+
+.redShade {
+  background-color: rgba(229, 81, 97, 0.13);
+}
+.greenShade {
+  background-color: rgba(154, 197, 85, 0.08);
+}
+
+.connectBackground {
+  background: rgb(28, 40, 55);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(28, 40, 55, 1) 0%,
+    rgba(74, 144, 226, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(28, 40, 55, 1) 0%,
+    rgba(74, 144, 226, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(28, 40, 55, 1) 0%,
+    rgba(74, 144, 226, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c2837",endColorstr="#4a90e2",GradientType=1);
+}
+
+.blueShadow {
+  box-shadow: 0px 0px 5px 0px rgba(74, 144, 226, 0.8);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(74, 144, 226, 0.8);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(74, 144, 226, 0.8);
+}
+.blackShadow{
+  box-shadow: 0px 0px 5px 0px rgba(00, 00, 00, 0.8);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(00, 00, 00, 0.8);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(00, 00, 00, 0.8);
+}
+/* For the loading page */
+.scanner span {
+  color: transparent;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner span::before {
+  content: "Loading...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid #4a90e2;
+  overflow: hidden;
+  color: #4a90e2;
+  animation: load91371 2s linear infinite;
+}
+
+@keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+
+  10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+    border-right-color: transparent;
+  }
+
+  11%,21%,31%,41%,51%,61%,71%,81%,91% {
+    border-right-color: #4a90e2;
+  }
+
+  60%, 80% {
+    width: 100%;
+  }
+}
+/* For the Loading */
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #4a90e2;
+  animation: spinner-a4dj62 1s infinite linear;
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: spinner-a4dj62 2s infinite;
+ }
+ 
+ .spinner::after {
+  margin: 8px;
+  animation-duration: 3s;
+ }
+ 
+ @keyframes spinner-a4dj62 {
+  100% {
+   transform: rotate(1turn);
+  }
+ }
+
+ /* Custom style for customized scroll bar */
+
+.special::-webkit-scrollbar {
+  height: 5px;
+}
+
+.special::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 2px;
+}
+.special::-webkit-scrollbar-thumb:hover {
+  background-color: #263344;
+}
+
+.special::-webkit-scrollbar-track {
+  background: #0c131c;
+}
+
+/* For the Sidebar layout */
+.mainWidth {
+  width: calc(100% - 20rem);
+  float: right;
+}
+@media screen and (max-width: 1024px) {
+  .mainWidth {
+    width: 100%;
+  }
+}
