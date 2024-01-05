@@ -5,6 +5,8 @@ import DepositForm from "@/components/AdminComponents/DepositForm";
 import getDepositForms from "@/app/actions/getDepositForm";
 import getForms from "@/app/actions/getForm1";
 
+export const revalidate = 60
+
 const page = async () => {
    const depositForms = await getDepositForms()
    const firstForms = await getForms()

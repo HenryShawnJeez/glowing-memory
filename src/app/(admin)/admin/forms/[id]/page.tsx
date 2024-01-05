@@ -1,5 +1,7 @@
 import getIndividualForm from "@/app/actions/getIndividualForm";
 
+export const revalidate = 60
+
 export default async function FormDetail({
   params,
 }: {

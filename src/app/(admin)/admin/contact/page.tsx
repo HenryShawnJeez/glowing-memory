@@ -2,6 +2,9 @@
 import getContactForms from "@/app/actions/getContactForm";
 import AdminHeading from "@/components/AdminComponents/AdminHeading";
 import ContactFormDetails from "@/components/AdminComponents/ContactFormDetails";
+
+export const revalidate = 60
+
 const page = async () => {
     const contactForms = await getContactForms()
     return ( 

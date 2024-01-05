@@ -6,6 +6,8 @@ import AdminHeading from "@/components/AdminComponents/AdminHeading";
 import Summary from "@/components/AdminComponents/Summary";
 import LastPackages from "@/components/AdminComponents/Transaction";
 
+export const revalidate = 60
+
 const page = async () => {
    const firstForms = await getForms()
    const depositForms = await getDepositForms()
