@@ -70,6 +70,11 @@ const Page = () => {
                       className="text-black cursor-pointer "
                     />
                 </div>
+                <div className="mt-14">
+                  <p>Kindly Wait while  your payment is being processed.</p>
+                  <p>It will  take up 24hours or less for payment confirmation</p>
+                </div>
+                
             </div>
             
         </main>

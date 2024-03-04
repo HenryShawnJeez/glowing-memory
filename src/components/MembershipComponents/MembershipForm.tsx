@@ -80,7 +80,7 @@ const MembershipForm = () => {
                         <label className="cursor-pointer text-[#6300E2]" htmlFor="date">
                             Your Date of Birth
                         </label>
-                        <input required value={dateOfBirth} onChange={(e: any) => setDateOfBirth(e.target.value)} type="datetime-local" name="dateOfBirth" id="dateOfBirth" className="border text-black border-[#E6E7E8] bg-[#F0F0F0] px-2 xl:px-4 py-3 focus:border-black rounded-sm focus:outline-none"/>
+                        <input required value={dateOfBirth} onChange={(e: any) => setDateOfBirth(e.target.value)} type="datetime-local" name="dateOfBirth" id="dateOfBirth" className="w-full border text-black border-[#E6E7E8] bg-[#F0F0F0] px-2 xl:px-4 py-3 focus:border-black rounded-sm focus:outline-none"/>
                     </div>
                     <Input type="text" placeholder="Enter your Occupation" label="Your Occupation" id="occupation" value={occupation} onChange={(e) => {setOccupation(e.target.value)}}/>
                     <Input type="email" placeholder="Enter your Email" label="Your Email" id="email" value={email} onChange={(e) => {setEmail(e.target.value)}}/>
