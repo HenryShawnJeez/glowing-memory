@@ -8,6 +8,7 @@ import usdt from "../../../../public/usdt.svg";
 
 //Import Needed Icons
 import { BsCopy } from "react-icons/bs";
+import { TbInfoTriangleFilled } from "react-icons/tb";
 
 const Page = () => {
     ///For the text to copy
@@ -70,9 +71,9 @@ const Page = () => {
                       className="text-black cursor-pointer "
                     />
                 </div>
-                <div className="mt-14">
-                  <p>Kindly Wait while  your payment is being processed.</p>
-                  <p>It will  take up 24hours or less for payment confirmation</p>
+                <div className="mt-14 flex gap-x-2 items-center">
+                  <TbInfoTriangleFilled size={24}/>
+                  <p>Payments take up to 24hours to process.</p>
                 </div>
                 
             </div>
