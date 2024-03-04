@@ -7,7 +7,7 @@ import { signOut } from 'next-auth/react'
 
 //Import Icons
 import { GoHomeFill } from "react-icons/go";
-import { FaTruck } from "react-icons/fa";
+import { FaAward } from "react-icons/fa6";
 import { MdReceiptLong } from "react-icons/md";
 import { RiAdminFill } from "react-icons/ri";
 import { LuLogOut } from "react-icons/lu";
@@ -45,6 +45,13 @@ const Sidebar = () => {
             <MdReceiptLong size={24} /> Forms
           </Link>
           <Link
+            href="/admin/membership"
+            prefetch
+            className={`${pathName === "/admin/membership" ? "text-accentBlue -translate-y-2 translate-x-2" : "text-black"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-accentBlue hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-accentBlue active:text-accentBlue md:text-base`}
+          >
+            <FaAward size={24} /> Membership Forms
+          </Link>
+          <Link
             href="/admin/contact"
             prefetch
             className={`${pathName === "/admin/contact" ? "text-accentBlue -translate-y-2 translate-x-2" : "text-black"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-accentBlue hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-accentBlue active:text-accentBlue md:text-base`}
@@ -70,7 +77,7 @@ const Sidebar = () => {
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.1}}
             className="fixed left-0 top-0 z-50 h-screen w-80 bg-white p-10 lg:hidden"
           >
             <AiOutlineCloseSquare
@@ -97,12 +104,19 @@ const Sidebar = () => {
                 <MdReceiptLong size={24} /> Forms
               </Link>
               <Link
-            href="/admin/contact"
-            prefetch
-            className={`${pathName === "/admin/contact" ? "text-accentBlue -translate-y-2 translate-x-2" : "text-black"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-accentBlue hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-accentBlue active:text-accentBlue md:text-base`}
-          >
-            <IoMdContact size={24} /> Contact
-          </Link>
+                href="/admin/membership"
+                prefetch
+                className={`${pathName === "/admin/membership" ? "text-accentBlue -translate-y-2 translate-x-2" : "text-black"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-accentBlue hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-accentBlue active:text-accentBlue md:text-base`}
+                >
+                <FaAward size={24} /> Membership Forms
+              </Link>
+              <Link
+                href="/admin/contact"
+                prefetch
+                className={`${pathName === "/admin/contact" ? "text-accentBlue -translate-y-2 translate-x-2" : "text-black"} flex items-center gap-x-3 rounded-md p-4 text-sm  duration-500 hover:-translate-y-2 hover:translate-x-2 hover:text-accentBlue hover:underline focus:-translate-y-2 focus:translate-x-2 focus:text-accentBlue active:text-accentBlue md:text-base`}
+                >
+                <IoMdContact size={24} /> Contact
+              </Link>
             </div>
             <button
               onClick={() => signOut()}

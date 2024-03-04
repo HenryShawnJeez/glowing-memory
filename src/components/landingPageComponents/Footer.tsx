@@ -5,6 +5,8 @@ import { TbBrandTelegram } from "react-icons/tb";
 import { SiInstagram } from "react-icons/si";
 import { RiTiktokLine } from "react-icons/ri";
 import { SlSocialFacebook } from "react-icons/sl";
+import { FaAward } from "react-icons/fa6";
+
 const Footer = () => {
   return (
     <main className="my-10 px-4 sm:px-6 lg:px-8">
@@ -24,7 +26,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="flex gap-x-2 flex-wrap">
-      <div className="flex gap-x-1 mt-4 border border-slate-700 w-28 items-center justify-center py-2 font-bold hover:bg-bgBlack hover:bg-opacity-40 duration-500">
+        <div className="flex gap-x-1 mt-4 border border-slate-700 w-28 items-center justify-center py-2 font-bold hover:bg-bgBlack hover:bg-opacity-40 duration-500">
           <SlSocialFacebook className="text-textBlue" />
           <Link href="https://www.facebook.com/profile.php?id=61551019777502" target="_blank">
             Facebook
@@ -53,6 +55,10 @@ const Footer = () => {
           >
             Tiktok
           </Link>
+        </div>
+        <div className="flex gap-x-1 mt-4 border border-slate-700 w-60 items-center justify-center py-2 font-bold hover:bg-bgBlack hover:bg-opacity-40 duration-500">
+            <FaAward className="text-textBlue"/>
+            <Link href="/membership" target="_blank">Royal Membership?</Link>
         </div>
       </div>
     </main>

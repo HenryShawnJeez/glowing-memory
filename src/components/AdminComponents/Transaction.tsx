@@ -1,43 +1,43 @@
 "use client"
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-//Import Needed Icons
-import { AiOutlineForm } from "react-icons/ai";
 
 const Transaction = (forms: any) => {
-    const router = useRouter()
   return (
-    <main className="mt-10 overflow-x-auto special text-textWhite">
-      <div className="flex justify-between w-full min-w-[40rem]">
+    <main className="mt-10 text-textWhite bg-bgBlue text-xs md:text-sm xl:text-base">
+      <div className="flex justify-between items-center">
         <p className="text-lg lg:text-xl font-bold">Ongoing Forms</p>
         <p className="">Your First Forms</p>
       </div>
 
       {forms.length === 0 && (
-        <div className="mt-10 w-full min-w-[40rem]">
-          <p className="text-center text-xl font-bold">No Form Yet</p>
+        <div className="mt-10 w-full">
+          <p className="text-center text-xl font-medium">No Form Yet</p>
         </div>
       )}
       {forms.length !== 0 && (
-        <div className="mt-10 w-full min-w-[40rem]">
+        <div className="mt-10 w-full">
           {forms?.forms &&
             forms.forms.map((form: any) => (
-              <div
+              <Link
                 key={form.id}
-                className="flex justify-between items-center mt-4 border-b border-gray-400 py-2 cursor-pointer" onClick={() => router.push(`/admin/forms/${form.id}`)}
+                className="flex justify-between gap-x-5 items-center mt-4 border-b border-gray-400 py-2 cursor-pointer overflow-x-auto special" href={`/admin/forms/${form.id}`}
               >
-                <AiOutlineForm className="text-orange" size={30} />
-                <p className="text-base md:text-lg lg:text-xl font-bold">{form.email}</p>
-                <p className="text-base md:text-lg lg:text-xl font-bold">
-                  {form.payoutQuantity}
-                </p>
-                <p className="text-base md:text-lg lg:text-xl font-bold">
-                  {form.iovWalletAddress}
-                </p>
-                <p className="text-base md:text-lg lg:text-xl font-bold">
-                  {form.iovClaimWallet}
-                </p>
-              </div>
+                <div>
+                  <p className="text-base md:text-lg lg:text-xl font-medium">{form.email}</p>
+                  <p className="text-base md:text-lg lg:text-xl font-medium">
+                    {form.payoutQuantity}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-base md:text-lg lg:text-xl font-medium">
+                    {form.iovWalletAddress}
+                  </p>
+                  <p className="text-base md:text-lg lg:text-xl font-medium">
+                    {form.iovClaimWallet}
+                  </p>
+                </div>
+                
+              </Link>
             ))}
         </div>
       )}

@@ -24,25 +24,25 @@ const Body = () => {
   //For the Amount to send and everything under
   useEffect(() => {
     switch (chosenNumber) {
-      case 25000000:
-        setGasFee(0.25);
+      case 25000000: 
+        setGasFee(0.50);
         setQuantity(25);
-        setBalance(25);
+        setBalance(49);
         break;
       case 50000000:
-        setGasFee(0.3);
+        setGasFee(1);
         setQuantity(50);
-        setBalance(48);
+        setBalance(138);
         break;
       case 75000000:
-        setGasFee(0.5);
+        setGasFee(1.5);
         setQuantity(75);
-        setBalance(119);
+        setBalance(259);
         break;
       case 100000000:
-        setGasFee(1.0);
+        setGasFee(2.5);
         setQuantity(100);
-        setBalance(396.98);
+        setBalance(410.78);
         break;
       default:
         setGasFee(0);

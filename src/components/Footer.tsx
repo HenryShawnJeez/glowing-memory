@@ -15,7 +15,7 @@ import { SlSocialFacebook } from "react-icons/sl";
 
 const Footer = () => {
     return ( 
-        <main>
+        <main className="bg-[#440892]">
             <Image src={bodyImg} alt="smartchain" className="mx-auto mt-10"/>
             <div className="bg-[#2D2727] flex flex-col gap-y-3 px-4 sm:px-6 lg:px-8 py-10">
                 <div className="flex gap-x-3 items-center">

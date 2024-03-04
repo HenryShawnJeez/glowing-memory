@@ -9,18 +9,16 @@ const roboto = Roboto({
   });
   
 
-export default function RootLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>
-      <Sidebar />
+      <section className={roboto.className}>
+        <Sidebar />
         <section className="mainWidth bg-bgBlue">{children}</section>
         <Toaster richColors position="top-center" closeButton />
-      </body>
-    </html>
+      </section>
   )
 }

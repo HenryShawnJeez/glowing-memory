@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: var(--font-roboto);
+}
+.roboto{
+  font-family: var(--font-roboto);
+}
+
+.brygada{
+  font-family: var(--font-brygada);
+}
+.background {
+  background-image:url("../../public/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 /* Customise Scrollbar for coordindators */
 .bar::-webkit-scrollbar {
   width: 4px;
@@ -13,7 +29,7 @@
 }
 
 .bar::-webkit-scrollbar-thumb:hover {
-  background-color: #4a90e2;
+  background-color: #4a90e2;    
 }
 
 .bar::-webkit-scrollbar-track {

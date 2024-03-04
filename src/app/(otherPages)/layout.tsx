@@ -1,5 +1,5 @@
 
-export default function RootLayout({
+export default function OtherPagesLayout({
   children,
 }: {
   children: React.ReactNode;
