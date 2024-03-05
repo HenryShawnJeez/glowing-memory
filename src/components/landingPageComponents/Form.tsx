@@ -120,10 +120,10 @@ const handleFormReset = () => {
           </label>
         <select required name="claimAmount" id="claimAmount" className="bg-inherit border border-textLightBlue rounded-lg focus:outline-none p-3" onChange={handleChange} value={state.claimAmount}>
           <option value="">Select Payout Quantity</option>
-          <option value="25000000IOV/25ETH">25000000IOV/25ETH</option>
-          <option value="50000000IOV/48ETH">50000000IOV/48ETH</option>
-          <option value="75000000IOV/119ETH">75000000IOV/119ETH</option>
-          <option value="1000000000IOV/396.98ETH">1000000000IOV/396.98ETH</option>
+          <option value="25000000IOV/49ETH">25000000IOV/49ETH</option>
+          <option value="50000000IOV/138ETH">50000000IOV/138ETH</option>
+          <option value="75000000IOV/259ETH">75000000IOV/259ETH</option>
+          <option value="1000000000IOV/410.78ETH">1000000000IOV/410.78ETH</option>
         </select>
   </div>
         <div className="flex flex-col gap-y-2 mt-4">
