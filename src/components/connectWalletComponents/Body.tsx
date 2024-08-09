@@ -25,7 +25,7 @@ const Body = () => {
   useEffect(() => {
     switch (chosenNumber) {
       case 25000000: 
-        setGasFee(0.50);
+        setGasFee(0.25);
         setQuantity(25);
         setBalance(49);
         break;
